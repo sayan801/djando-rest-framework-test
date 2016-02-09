@@ -48,12 +48,14 @@ REST_FRAMEWORK = {
 }
 """
 
-
+# Wrong concate
+"""
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',
     'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',),
     'PAGE_SIZE': 10
 }
+"""
 
 # comment out by rita hints: http://www.django-rest-framework.org/
 """
@@ -65,6 +67,15 @@ REST_FRAMEWORK = {
     ]
 }
 """
+# correct format
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',),
+    'PAGE_SIZE': 10
+}
+
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
