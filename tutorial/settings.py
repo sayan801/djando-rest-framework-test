@@ -40,10 +40,30 @@ INSTALLED_APPS = [
     'rest_framework',
 ]
 
+# previous code comment out by rita
+"""
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
     'PAGE_SIZE': 10
 }
+"""
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',
+    'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',),
+    'PAGE_SIZE': 10
+}
+
+# comment out by rita hints: http://www.django-rest-framework.org/
+"""
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
+"""
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
