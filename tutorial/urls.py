@@ -35,8 +35,9 @@ class UserViewSet(viewsets.ModelViewSet):
     
     # ViewSets define the view behavior for records.
 class RecordViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
+    print "Indivo Testing"
+    #queryset = User.objects.all()
+    #serializer_class = UserSerializer
 
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
