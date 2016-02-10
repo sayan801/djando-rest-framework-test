@@ -52,7 +52,7 @@ class RecordViewSet(BaseParser):
         """
         return stream.read()
     
-    BaseParser(bbb)
+   def BaseParser(bbb):
     return 1
 
 
