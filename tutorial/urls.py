@@ -34,7 +34,7 @@ class UserViewSet(viewsets.ModelViewSet):
     
     
     # ViewSets define the view behavior for records.
-class RecordViewSet(viewsets.ModelViewSet):
+class RecordViewSet():
     print "Indivo Testing"
     #queryset = User.objects.all()
     #serializer_class = UserSerializer
