@@ -51,6 +51,9 @@ class RecordViewSet(BaseParser):
         Simply return a string representing the body of the request.
         """
         return stream.read()
+    
+    BaseParser(bbb)
+    return 1
 
 
 
