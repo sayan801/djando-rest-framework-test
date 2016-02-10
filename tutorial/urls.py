@@ -71,12 +71,10 @@ def hello():
 
 """
 
-class RecordViewSet(viewsets.ModelViewSet):
+class RecordViewSet:
     print moduletest.ageofqueen
 cfcpiano = moduletest.Piano()
 cfcpiano.printdetails()
-queryset = Record.objects.all()
-serializer_class = Views.RecordSerializer
     
     
 

@@ -21,11 +21,12 @@ class GroupViewSet(viewsets.ModelViewSet):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
     
-    
+"""    
 class RecordViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows groups to be viewed or edited.
-    """
+    
+    #API endpoint that allows groups to be viewed or edited.
+    
     queryset = Record.objects.all()
-    serializer_class = RecordSerializer    
+    serializer_class = RecordSerializer  """
+      
     
