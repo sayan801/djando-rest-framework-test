@@ -1,9 +1,9 @@
 from django.shortcuts import render
 
 # Create your views here.
-from django.contrib.auth.models import User, Group
+from django.contrib.auth.models import User, Group, Author
 from rest_framework import viewsets
-from tutorial.quickstart.serializers import UserSerializer, GroupSerializer
+from tutorial.quickstart.serializers import UserSerializer, GroupSerializer,AuthorSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -30,3 +30,9 @@ class RecordViewSet(viewsets.ModelViewSet):
     serializer_class = RecordSerializer  """
       
     
+class AuthorView(generics.ListAPIView):
+    """
+    Returns a list of all authors.
+    """
+    model = Author
+    serializer_class = AuthorSerializer

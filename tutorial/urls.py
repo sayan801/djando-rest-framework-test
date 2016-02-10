@@ -70,11 +70,12 @@ def hello():
     return 1234
 
 """
-
+"""
 class RecordList:
     print moduletest.ageofqueen
-#cfcpiano = moduletest.Piano()
-#cfcpiano.printdetails()
+cfcpiano = moduletest.Piano()
+cfcpiano.printdetails()
+"""
     
     
 
@@ -82,7 +83,7 @@ class RecordList:
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'groups', views.GroupViewSet)
-router.register(r'records', RecordList)
+#router.register(r'records', RecordList)
 
 # Comment out by rita
 """
@@ -95,5 +96,6 @@ router.register(r'groups', views.GroupViewSet)
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     url(r'^', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^authors/$', views.AuthorView.as_view(), name='author-list')
 ]
