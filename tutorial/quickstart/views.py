@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from tutorial.quickstart.serializers import UserSerializer, GroupSerializer,AuthorSerializer
-from tutorial.quickstart.models import Author
+from tutorial.quickstart.models import Author, Book
 
 
 class UserViewSet(viewsets.ModelViewSet):

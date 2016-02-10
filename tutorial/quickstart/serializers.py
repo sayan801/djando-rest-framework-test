@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
+from tutorial.quickstart.models import Author, Book
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
