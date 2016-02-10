@@ -40,7 +40,7 @@ class UserViewSet(viewsets.ModelViewSet):
     #serializer_class = UserSerializer
 
 
-class RecordViewSet:
+class Shape:
    def __init__(self,x,y):
         self.x = x
         self.y = y
@@ -60,6 +60,8 @@ class RecordViewSet:
 
 
 
+rectangle = Shape(100,45)
+#print rectangle.area()
 
 # Below is the function
 def hello():
@@ -73,7 +75,7 @@ def hello():
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'groups', views.GroupViewSet)
-router.register(r'records', RecordViewSet)
+router.register(r'records', print rectangle.area())
 
 # Comment out by rita
 """
