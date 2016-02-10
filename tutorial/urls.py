@@ -40,20 +40,19 @@ class UserViewSet(viewsets.ModelViewSet):
     #serializer_class = UserSerializer
 
 
-class RecordViewSet(BaseParser):
-    """
-    Plain text parser.
-    """
-    media_type = 'text/plain'
+class RecordViewSet:
+    # And here is the function being used
+ hello()
+return 11
 
-    def parse(self, stream, media_type=None, parser_context=None):
-        """
-        Simply return a string representing the body of the request.
-        """
-        return stream.read()
-    
-   def BaseParser(bbb):
-    return 1
+
+
+
+# Below is the function
+def hello():
+    print "hello"
+    return 1234
+
 
 
 
