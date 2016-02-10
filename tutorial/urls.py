@@ -43,7 +43,7 @@ class UserViewSet(viewsets.ModelViewSet):
 class RecordViewSet:
     # And here is the function being used
  hello()
-return 11
+#return 11
 
 
 
