@@ -17,6 +17,7 @@ from django.conf.urls import url, include
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
 from tutorial.quickstart import views
+from tutorial.quickstart import moduletest
 
 #Rita http://www.django-rest-framework.org/
 
@@ -39,7 +40,7 @@ class UserViewSet(viewsets.ModelViewSet):
     #queryset = User.objects.all()
     #serializer_class = UserSerializer
 
-
+"""
 class Shape:
    def __init__(self,x,y):
         self.x = x
@@ -68,14 +69,20 @@ def hello():
     print "hello"
     return 1234
 
+"""
 
-
+class RecordViewSet:
+    print moduletest.ageofqueen
+cfcpiano = moduletest.Piano()
+cfcpiano.printdetails()
+    
+    
 
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'groups', views.GroupViewSet)
-router.register(r'records', print rectangle.area())
+router.register(r'records', RecordViewSet)
 
 # Comment out by rita
 """
