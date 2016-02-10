@@ -71,10 +71,10 @@ def hello():
 
 """
 
-class RecordViewSet:
+class RecordList:
     print moduletest.ageofqueen
-cfcpiano = moduletest.Piano()
-cfcpiano.printdetails()
+#cfcpiano = moduletest.Piano()
+#cfcpiano.printdetails()
     
     
 
@@ -82,7 +82,7 @@ cfcpiano.printdetails()
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'groups', views.GroupViewSet)
-router.register(r'records', RecordViewSet)
+router.register(r'records', RecordList)
 
 # Comment out by rita
 """
