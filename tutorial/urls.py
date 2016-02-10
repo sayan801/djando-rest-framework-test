@@ -16,8 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
-from tutorial.quickstart import views
-from tutorial.quickstart import moduletest
+from tutorial.quickstart import views, moduletest
 
 #Rita http://www.django-rest-framework.org/
 

@@ -20,6 +20,8 @@ class RecordSerializer(serializers.HyperlinkedModelSerializer):
         model = Record
         fields = ('url', 'record_name') """
         
+        
+    # http://code.tutsplus.com/tutorials/beginners-guide-to-the-django-rest-framework--cms-19786    
 class BookSerializer(serializers.ModelSerializer):
     """
     Serializing all the Books
