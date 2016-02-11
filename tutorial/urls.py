@@ -17,6 +17,7 @@ from django.conf.urls import url, include
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
 from tutorial.quickstart import views, moduletest
+from django.conf.urls import patterns, url
 
 #Rita http://www.django-rest-framework.org/
 
@@ -93,8 +94,19 @@ router.register(r'groups', views.GroupViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
+
+"""
 urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^authors/$', views.AuthorView.as_view(), name='author-list')
-]
+]"""
+
+urlpatterns = patterns(
+    'talk.views',
+    url(r'^$', 'home'),
+
+    # api
+    url(r'^api/v1/posts/$', 'post_collection'),
+    url(r'^api/v1/posts/(?P<pk>[0-9]+)$', 'post_element')
+)

@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from tutorial.quickstart.models import Author, Book
+#from tutorial.quickstart.models import Author, Book
+from talk.models import Post
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -20,25 +21,27 @@ class RecordSerializer(serializers.HyperlinkedModelSerializer):
         model = Record
         fields = ('url', 'record_name') """
         
+
         
+"""        
     # http://code.tutsplus.com/tutorials/beginners-guide-to-the-django-rest-framework--cms-19786    
 class BookSerializer(serializers.ModelSerializer):
-    """
-    Serializing all the Books
-    """
+    
     class Meta:
         model = Book
         fields = ('id', 'title', 'isbn')
         
 class AuthorSerializer(serializers.ModelSerializer):
-    """
-    Serializing all the Authors
-    """
+    
     books = BookSerializer(many=True) 
     class Meta:
         model = Author
         fields = ('id', 'first_name', 'last_name', 'books')
+        """
         
+class PostSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Post
+        fields = ('id', 'author', 'text', 'created', 'updated')
         
-       
-               
